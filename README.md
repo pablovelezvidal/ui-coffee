@@ -1,4 +1,6 @@
-# UiAiwantoplay
+# Ui Coffee Progressive web app
+
+Angular 4 practice by creating a progressive web app
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
 
