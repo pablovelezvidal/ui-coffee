@@ -1,0 +1,61 @@
+{
+  "index": "/index.html",
+  "assetGroups": [{
+    "name": "app",
+    "installMode": "prefetch",
+    "resources": {
+      "files": [
+        "/icons/**",
+        "/index.html"
+      ],
+      "versionedFiles": [
+        "/*.bundle.css",
+        "/*.bundle.js",
+        "/*.chunk.js"
+      ]
+    }
+  }, {
+    "name": "assets",
+    "installMode": "lazy",
+    "updateMode": "prefetch",
+    "resources": {
+      "files": [
+        "/assets/**"
+      ]
+    }
+  },{
+    "name": "fonts",
+    "resources": {
+      "urls": [
+        "https://fonts.googleapis.com/icon?family=Material+Icons",
+        "https://fonts.gstatic.com/s/materialicons/v36/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2"
+      ]
+    }
+  }],
+  "dataGroups": [{
+      "name": "api-freshness",
+      "urls": [
+        "http://192.168.0.25:3000",
+        "http://192.168.0.25:3000/coffees"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 100,
+        "maxAge": "3d",
+        "timeout": "10s"
+      }
+    },
+    {
+      "name": "api-performance",
+      "urls": [
+        "http://192.168.0.25:3000",
+        "http://192.168.0.25:3000/coffees"
+      ],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxSize": 100,
+        "maxAge": "3d"
+      }
+    }
+  ]
+}
